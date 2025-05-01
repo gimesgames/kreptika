@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KREPTIKA - Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            width: 10px;
+            height: 100vh;
+            background-color: #0f0;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+        }
+
+        .header {
+            padding: 20px;
+            background-color: #000;
+            border-bottom: 2px solid #fff;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .logo img {
+            max-width: 80%;
+            filter: invert(1);
+        }
+
+        .tagline {
+            text-align: center;
+            font-style: italic;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #fff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 10px;
+            background-color: #111;
+            border: 1px solid #333;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 2px solid #0f0;
+        }
+
+        .video-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 15px 0;
+            text-transform: uppercase;
+            border-bottom: 1px dashed #fff;
+            padding-bottom: 5px;
+        }
+
+        .video-description {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 10px;
+            color: #ccc;
+            text-align: justify;
+        }
+
+        .footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar"></div>
+
+    <div class="header">
+        <div class="logo">
+            <img src="/img/title.png" alt="KREPTIKA logo">
+        </div>
+        <div class="tagline">Fanzine autoprodotta</div>
+
+        <div class="nav-menu">
+            <a href="/index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Articoli</a>
+            <a href="#" class="nav-link">Video</a>
+            <a href="#" class="nav-link">Foto</a>
+            <a href="#" class="nav-link">Contatti</a>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video-title">KONTROFOTO</div>
+        <video controls poster="/img/poster.jpg">
+            <source src="/vid/kontrofoto.mp4" type="video/mp4">
+            Il tuo browser non supporta la riproduzione video.
+        </video>
+        <div class="video-description">
+          <p>
+            Breve report video.
+          </p>
+      Durante la pacifica manifestazione del 25 aprile 2025, mi sono messo controfilmare come atto di protesta non violenta alla strumentalizzazione dell'immagine.
+      <p>Musiche di "Mauro Lupone" saccheggiate dal documentario "SOLO LIMONI" diretto da Giacomo Verde e prodotto da ShaKe Edizioni Underground,<p>
+        <p>voce di sottofondo estratta dal documentario "La société du spectacle" del regista e filosofo Guy Debord. </p>
+          
+        
+      </div>
+    </div>
+
+    <div class="footer">
+        <p>ferma SUBITO la tua depersonificazione!</p>
+            <p class="disclaimer">l’impellente necessità di esprimersi della nostra generazione, ha portato alla creazione di questa fanzine</p>    </div>
+</body>
+</html>

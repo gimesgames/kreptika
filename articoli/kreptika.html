@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articolo - KREPTIKA</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .sidebar {
+      width: 10px;
+      height: 100vh;
+      background-color: #0f0;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 999;
+    }
+
+    .header {
+      padding: 20px;
+      background-color: #000;
+      border-bottom: 2px solid #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-container {
+      text-align: center;
+    }
+
+    .logo img {
+      max-width: 80%;
+      filter: invert(1);
+    }
+
+    .tagline {
+      text-align: center;
+      font-style: italic;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+      position: relative;
+    }
+
+    .nav-link:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+    }
+
+    .article-wrapper {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #111;
+      border: 1px solid #333;
+      position: relative;
+    }
+
+    .article-title {
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 2px dashed #fff;
+      margin-bottom: 10px;
+    }
+
+    .article-meta {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .article-content {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .article-content p {
+      margin-bottom: 16px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #0f0;
+      border-left: 3px solid #0f0;
+      padding-left: 10px;
+      margin: 20px 0;
+    }
+
+    .footer {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #333;
+      font-size: 12px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .article-wrapper {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar"></div>
+
+  <div class="header">
+    <div class="logo-container">
+      <img src="/img/title.png" alt="KREPTIKA Logo">
+    </div>
+    <div class="tagline">Fanzine autoprodotta</div>
+    <div class="nav-menu">
+      <a href="/index.html" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Articoli</a>
+      <a href="#" class="nav-link">Dossier</a>
+      <a href="#" class="nav-link">Foto</a>
+      <a href="#" class="nav-link">Contribuisci</a>
+      <a href="#" class="nav-link">Contatti</a>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+    <div class="article-title">KREPTIKA?</div>
+    <div class="article-meta">Pubblicato il 30 Aprile 2025 | Categoria: Resistenza</div>
+    <div class="article-content">
+      <p>
+        Kreptika è una forma di espressione, d’arte
+e di ideale.      </p>
+      <p class="quote">
+        “Ideata dalla necessità di esprimersi.”
+      </p>
+      <p>
+        Siamo una generazione che si trova in bilico 
+su di un sottile filo di seta, sempre più vicini 
+all’ultima sera,  sempre più lontani dall’idea 
+di mondo non violento, aggettivato come “utopico” 
+per renderlo addirittura impensabile.       </p>
+      <p>
+        L’idea di speranza non è mai servita e mai servirà, 
+ti trovi davanti a un bivio in questo momento:      </p>
+      <p>
+        Puoi decidere di seguire la corsia asfaltata, 
+ben visibile, piena di lampioni e videocamere 
+che ti avvolgono in un freddo abbraccio 
+di sicurezza, consapevole della meta finale, 
+oppure il sentierino in terra battuta che esce 
+dallo stradone, che più prova a ributtare 
+dentro un pò di terriccio,  
+più viene asfaltata.      </p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ferma SUBITO la tua depersonificazione!</p>
+    <p class="disclaimer">l’impellente necessità di esprimersi della nostra generazione, ha portato alla creazione di questa fanzine</p>
+</div>
+</div>
+</body>
+</html>
