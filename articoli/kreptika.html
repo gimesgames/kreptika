@@ -91,6 +91,8 @@
       text-transform: uppercase;
       border-bottom: 2px dashed #fff;
       margin-bottom: 10px;
+      letter-spacing: 1.5px;
+      line-height: 1.2;
     }
 
     .article-meta {
@@ -98,6 +100,7 @@
       color: #aaa;
       margin-bottom: 20px;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .article-content {
@@ -126,6 +129,88 @@
       margin-top: 40px;
     }
 
+    /* Nuovi stili per migliorare la gerarchia del testo */
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+      line-height: 1.2;
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    h2 {
+      font-size: 22px;
+      margin: 30px 0 15px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 5px;
+      color: #0f0;
+    }
+    
+    .intro {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+      color: #0f0;
+    }
+    
+    .category-tag {
+      display: inline-block;
+      background-color: rgba(15, 255, 15, 0.1);
+      color: #0f0;
+      border: 1px solid #0f0;
+      padding: 3px 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-right: 10px;
+    }
+    
+    .date {
+      display: inline-block;
+      color: #aaa;
+      font-style: italic;
+    }
+    
+    .meta-container {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .section {
+      margin: 30px 0;
+    }
+    
+    .blockquote {
+      margin: 25px 0;
+      padding: 15px;
+      border-left: 3px solid #0f0;
+      background-color: rgba(15, 255, 15, 0.05);
+      font-style: italic;
+    }
+    
+    .article-closing {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px dashed #333;
+    }
+    
+    .disclaimer {
+      font-size: 12px;
+      text-align: center;
+      font-style: italic;
+      margin-top: 10px;
+      color: #aaa;
+    }
+
     @media (max-width: 768px) {
       .article-wrapper {
         margin: 20px;
@@ -136,55 +221,66 @@
 <body>
   <div class="sidebar"></div>
 
-  <div class="header">
+  <header class="header">
     <div class="logo-container">
       <img src="https://i.imgur.com/f0lEuZQ.png" alt="KREPTIKA Logo">
     </div>
     <div class="tagline">Fanzine autoprodotta</div>
-    <div class="nav-menu">
-            <a href="http://kreptika.it" class="nav-link">Home</a>
-            <a href="#" class="nav-link">Fanzine Pdf</a>
-            <a href="#" class="nav-link">Foto</a>
-            <a href="/contribuisci.html" class="nav-link">Contribuisci</a>
-            <a href="#" class="nav-link">Altri progetti</a>
-    </div>
-  </div>
+    <nav class="nav-menu">
+      <a href="http://kreptika.it" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Fanzine Pdf</a>
+      <a href="#" class="nav-link">Foto</a>
+      <a href="/contribuisci.html" class="nav-link">Contribuisci</a>
+      <a href="#" class="nav-link">Altri progetti</a>
+    </nav>
+  </header>
 
-  <div class="article-wrapper">
-    <div class="article-title">KREPTIKA?</div>
-    <div class="article-meta">Pubblicato il 30 Aprile 2025 | Categoria: Resistenza</div>
-    <div class="article-content">
-      <p>
-        Kreptika è una forma di espressione, d’arte
-e di ideale.      </p>
-      <p class="quote">
-        “Ideata dalla necessità di esprimersi.”
-      </p>
-      <p>
-        Siamo una generazione che si trova in bilico 
-su di un sottile filo di seta, sempre più vicini 
-all’ultima sera,  sempre più lontani dall’idea 
-di mondo non violento, aggettivato come “utopico” 
-per renderlo addirittura impensabile.       </p>
-      <p>
-        L’idea di speranza non è mai servita e mai servirà, 
-ti trovi davanti a un bivio in questo momento:      </p>
-      <p>
-        Puoi decidere di seguire la corsia asfaltata, 
-ben visibile, piena di lampioni e videocamere 
-che ti avvolgono in un freddo abbraccio 
-di sicurezza, consapevole della meta finale, 
-oppure il sentierino in terra battuta che esce 
-dallo stradone, che più prova a ributtare 
-dentro un pò di terriccio,  
-più viene asfaltata.      </p>
-    </div>
-  </div>
+  <main class="article-wrapper">
+    <article>
+      <h1 class="article-title">KREPTIKA?</h1>
+      
+      <div class="meta-container">
+        <span class="category-tag">Resistenza</span>
+        <span class="date">Pubblicato il 30 Aprile 2025</span>
+      </div>
+      
+      <div class="article-content">
+        <p class="intro">
+          Kreptika è una forma di espressione, d'arte e di ideale.
+        </p>
+        
+        <blockquote class="blockquote">
+          "Ideata dalla necessità di esprimersi."
+        </blockquote>
+        
+        <section class="section">
+          <p>
+            Siamo una generazione che si trova in bilico su di un sottile filo di seta, 
+            sempre più vicini all'ultima sera, sempre più lontani dall'idea 
+            di mondo non violento, aggettivato come "utopico" per renderlo addirittura impensabile.
+          </p>
+        </section>
+        
+        <section class="section">
+          <h2>La scelta</h2>
+          <p>
+            L'idea di speranza non è mai servita e mai servirà, ti trovi davanti a un bivio in questo momento:
+          </p>
+          
+          <p>
+            Puoi decidere di seguire la corsia asfaltata, ben visibile, piena di lampioni e videocamere 
+            che ti avvolgono in un freddo abbraccio di sicurezza, consapevole della meta finale, 
+            oppure il sentierino in terra battuta che esce dallo stradone, che più prova a ributtare 
+            dentro un pò di terriccio, più viene asfaltata.
+          </p>
+        </section>
+      </div>
+    </article>
+  </main>
 
-  <div class="footer">
+  <footer class="footer">
     <p>ferma SUBITO la tua depersonificazione!</p>
-    <p class="disclaimer">l’impellente necessità di esprimersi della nostra generazione, ha portato alla creazione di questa fanzine</p>
-</div>
-</div>
+    <p class="disclaimer">l'impellente necessità di esprimersi della nostra generazione, ha portato alla creazione di questa fanzine</p>
+  </footer>
 </body>
 </html>
