@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KREPTIKA - Sito di Controinformazione</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .sidebar {
+            width: 10px;
+            height: 100vh;
+            background-color: #0f0;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+        }
+
+        .header {
+            padding: 20px;
+            background-color: #000;
+            border-bottom: 2px solid rgb(255, 255, 255);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(90deg, transparent 0%, transparent 98%, rgb(255, 255, 255) 98%, rgb(255, 255, 255) 100%),
+                linear-gradient(0deg, transparent 0%, transparent 98%, rgb(255, 255, 255) 98%, rgb(255, 255, 255) 100%);
+            background-size: 50px 50px;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .logo {
+            text-align: center;
+            margin: 20px 0;
+            display: inline-block;
+            width: 100%;
+            position: relative;
+        }
+        
+        .logo img {
+            max-width: 80%;
+            height: auto;
+            filter: drop-shadow(2px 2px 0px rgb(255, 255, 255));
+        }
+
+        .logo-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .logo-container::before, .logo-container::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgb(255, 255, 255);
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+
+        .logo-container::before {
+            top: -20px;
+            left: 10%;
+        }
+
+        .logo-container::after {
+            bottom: -20px;
+            right: 10%;
+        }
+
+        .tagline {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transform: skew(-5deg);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .article {
+            background-color: #111;
+            border: 1px solid #333;
+            padding: 15px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2);
+            border-color: rgb(255, 255, 255);
+        }
+
+        .article::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(15, 255, 15, 0.05) 20px, rgba(15, 255, 15, 0.05) 21px);
+            z-index: -1;
+        }
+
+        .article-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px dashed rgb(255, 255, 255);
+            padding-bottom: 5px;
+        }
+
+        .article-excerpt {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .read-more {
+            display: inline-block;
+            background-color: #000;
+            color: rgb(255, 255, 255);
+            padding: 5px 10px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            border: 1px solid rgb(255, 255, 255);
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            background-color: rgb(255, 255, 255);
+            color: #000;
+        }
+
+        .attention-banner {
+            text-align: center;
+            padding: 15px;
+            margin: 20px 0;
+            border-top: 2px dashed rgb(255, 255, 255);
+            border-bottom: 2px dashed rgb(255, 255, 255);
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background-color: #111;
+            animation: flash 2s infinite;
+        }
+
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .disclaimer {
+            font-size: 12px;
+            text-align: center;
+            font-style: italic;
+            margin-top: 10px;
+            color: #aaa;
+        }
+
+        .footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 12px;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .category {
+            padding: 5px 15px;
+            background-color: #000;
+            border: 1px solid rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            transform: skew(-10deg);
+        }
+
+        .category:hover {
+            background-color: rgb(255, 255, 255);
+            color: #000;
+            cursor: pointer;
+        }
+
+        .topographic {
+            height: 150px;
+            background-image: linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-color: transparent;
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .topographic::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 50% 50%, transparent 0%, transparent 70%, #0f0 100%);
+            opacity: 0.1;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: rgb(255, 255, 255);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .alert-box {
+            background-color: #111;
+            border-left: 5px solid #f00;
+            padding: 15px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 48px;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar"></div>
+        
+        <div class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="https://i.imgur.com/f0lEuZQ.png" alt="KREPTIKA logo" style="filter: invert(1);">
+                </div>
+            </div>
+            <div class="tagline">Fanzine autoprodotta</div>
+            
+            <div class="nav-menu">
+                <a href="/index.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Fanzine Pdf</a>
+                <a href="#" class="nav-link">Foto</a>
+                <a href="/contribuisci.html" class="nav-link">Contribuisci</a>
+                <a href="#" class="nav-link">Altri progetti</a>
+            </div>
+        </div>
+        
+        <div class="attention-banner">
+            RESISTENZA
+        </div>
+        
+
+
+        <div class="main-content">
+            <div class="article">
+                <div class="article-title">KREPTIKA?</div>
+                <div class="article-excerpt">
+                    Kreptika è una forma di espressione, d’artee di ideale. Ideata dalla necessità di esprimersi.
+                </div>
+                <a href="/articoli/kreptika.html" class="read-more">Leggi tutto</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="article">
+                <div class="article-title">Repressione intelligente</div>
+                <div class="article-excerpt">
+                    Tra i più noti desideri umani, dopo quello di volare, c’è sempre stato quello di sentirsi al pari di un dio creatore...
+                    Avvento delle reti neurali artificiali.
+                </div>
+                <a href="/articoli/repressione_intelligente.html" class="read-more">Leggi tutto</a>
+            </div>
+        </div>
+        <div class="alert-box">
+           
+        </div>
+        
+        <div class="footer">
+            <p>ferma SUBITO la tua depersonificazione!</p>
+            <p class="disclaimer">l’impellente necessità di esprimersi della nostra generazione, ha portato alla creazione di questa fanzine</p>
+        </div>
+    </div>
+</body>
+</html>
