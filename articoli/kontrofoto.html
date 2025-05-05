@@ -198,6 +198,31 @@
             margin-bottom: 15px;
             font-style: italic;
         }
+        .category-tag {
+      display: inline-block;
+      background-color: rgba(15, 255, 15, 0.1);
+      color: #0f0;
+      border: 1px solid #0f0;
+      padding: 3px 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-right: 10px;
+    }
+    
+    .date {
+      display: inline-block;
+      color: #aaa;
+      font-style: italic;
+    }
+    
+    .meta-container {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
     </style>
 </head>
 <body>
@@ -220,7 +245,12 @@
 
     <main class="video-container">
         <h1 class="video-title">KONTROFOTO</h1>
-        
+
+        <div class="meta-container">
+            <span class="category-tag">Resistenza</span>
+            <span class="date">Pubblicato il 30 Aprile 2025</span>
+          </div>
+
         <div class="iframe-container">
             <iframe width="100%" height="450" src="https://www.youtube.com/embed/tJF-yKYjFgs" 
                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
