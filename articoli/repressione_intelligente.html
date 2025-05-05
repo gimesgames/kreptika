@@ -126,6 +126,14 @@
       margin-top: 40px;
     }
 
+    .article-content h2 {
+      font-size: 22px;
+      text-transform: uppercase;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
     @media (max-width: 768px) {
       .article-wrapper {
         margin: 20px;
@@ -136,69 +144,64 @@
 <body>
   <div class="sidebar"></div>
 
-  <div class="header">
+  <header class="header">
     <div class="logo-container">
       <img src="https://i.imgur.com/f0lEuZQ.png" alt="KREPTIKA Logo">
     </div>
-    <div class="tagline">Fanzine autoprodotta</div>
-    <div class="nav-menu">
-            <a href="http://kreptika.it" class="nav-link">Home</a>
-            <a href="#" class="nav-link">Fanzine Pdf</a>
-            <a href="#" class="nav-link">Foto</a>
-            <a href="/contribuisci.html" class="nav-link">Contribuisci</a>
-            <a href="#" class="nav-link">Altri progetti</a>
-    </div>
-  </div>
+    <p class="tagline">Fanzine autoprodotta</p>
+    <nav class="nav-menu">
+      <a href="http://kreptika.it" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Fanzine Pdf</a>
+      <a href="#" class="nav-link">Foto</a>
+      <a href="/contribuisci.html" class="nav-link">Contribuisci</a>
+      <a href="#" class="nav-link">Altri progetti</a>
+    </nav>
+  </header>
 
-  <div class="article-wrapper">
-    <div class="article-title">Repressione intelligente</div>
-    <div class="article-meta">Pubblicato il 30 Aprile 2025 | Categoria: Resistenza</div>
-    <div class="article-content">
-      <p>
-        Nel 1956, John McCarthy, conia il termine 
-“Artificial Intelligence”, affermando una tecnologia 
-che negli ultimi due decenni si è andata a sviluppare
-freneticamente.     </p>
-      <p class="quote">
-        "Tra i più noti desideri umani, dopo quello di volare, c’è sempre stato quello di sentirsi al pari di un dio creatore...""
-      </p>
-      <p>
-        Sempre più umanizzata e vicina alla ragione, 
-        di facciata destinata all’utilizzo comune, 
-        di fatto sfruttata per genocidi e controllo 
-        repressivo della popolazione. 
-        Mentre ci divertiamo a fare strane domande a una AI, 
-         un modello simile, a Gaza, controlla un drone militare 
-          israeliano che spara su vite innocenti. Sistemi 
-           intelligenti di sicurezza urbana identificano 
-            e segnalano istantaneamente anomalie nell’ “ordine pubblico”.
-            Sapendo che l’evoluzione artificiale non farà altro 
-            che accelerare nel tempo, è importante avere 
-       una  una minima conoscenza del funzionamento 
-              di queste AI, in modo da poterle affrontare 
-               nel vostro piccolo.       </p>
-      <p>
-        LARGE LANGUAGE MODEL     </p>
-      <p>
-        Il funzionamento di questi modelli si basa 
-                                 sull’elaborazione di grandissime quantità di dati 
-e informazioni, la maggior parte sono utilizzate impropriamente o ottenute con 
-autorizzazioni confusive, infatti quasi tutti i termini che accettiamo, acconsentono 
-a utilizzare i nostri dati a scopo di lucro o per un utilizzi secondari come il 
-training di intelligenze artificiali.        </p>
- <p>uesta grande mole di informazioni finisce in pasto a un algoritmo che successivamente 
-  ci restituisce un modello allenato, che funziona fondamentalmente come un correttore 
-  automatico di un semplice cellulare. Si basa infatti sulla previsione probabilistica 
-  della parola successiva, creando così frasi di senso compiuto rispetto ai dati acquisiti. 
-  Ovviamente questa è una definizione molto sintetica delle reti neurali artificiali, 
-  ma è abbastanza per capire il concetto base. </p>
-    </div>
-  </div>
+  <main class="article-wrapper">
+    <article>
+      <h1 class="article-title">Repressione intelligente</h1>
+      <div class="article-meta">Pubblicato il 30 Aprile 2025 | Categoria: Resistenza</div>
+      <div class="article-content">
+        <p>
+          Nel 1956, John McCarthy, conia il termine "Artificial Intelligence", affermando una tecnologia 
+          che negli ultimi due decenni si è andata a sviluppare freneticamente.
+        </p>
+        <blockquote class="quote">
+          "Tra i più noti desideri umani, dopo quello di volare, c'è sempre stato quello di sentirsi al pari di un dio creatore..."
+        </blockquote>
+        <p>
+          Sempre più umanizzata e vicina alla ragione, di facciata destinata all'utilizzo comune, 
+          di fatto sfruttata per genocidi e controllo repressivo della popolazione. 
+          Mentre ci divertiamo a fare strane domande a una AI, un modello simile, a Gaza, controlla un drone militare 
+          israeliano che spara su vite innocenti. Sistemi intelligenti di sicurezza urbana identificano 
+          e segnalano istantaneamente anomalie nell'"ordine pubblico".
+          Sapendo che l'evoluzione artificiale non farà altro che accelerare nel tempo, è importante avere 
+          una minima conoscenza del funzionamento di queste AI, in modo da poterle affrontare nel vostro piccolo.
+        </p>
+        <h2>Large Language Model</h2>
+        <p>
+          Il funzionamento di questi modelli si basa sull'elaborazione di grandissime quantità di dati 
+          e informazioni, la maggior parte sono utilizzate impropriamente o ottenute con 
+          autorizzazioni confusive, infatti quasi tutti i termini che accettiamo, acconsentono 
+          a utilizzare i nostri dati a scopo di lucro o per un utilizzi secondari come il 
+          training di intelligenze artificiali.
+        </p>
+        <p>
+          Questa grande mole di informazioni finisce in pasto a un algoritmo che successivamente 
+          ci restituisce un modello allenato, che funziona fondamentalmente come un correttore 
+          automatico di un semplice cellulare. Si basa infatti sulla previsione probabilistica 
+          della parola successiva, creando così frasi di senso compiuto rispetto ai dati acquisiti. 
+          Ovviamente questa è una definizione molto sintetica delle reti neurali artificiali, 
+          ma è abbastanza per capire il concetto base.
+        </p>
+      </div>
+    </article>
+  </main>
 
-  <div class="footer">
+  <footer class="footer">
     <p>ferma SUBITO la tua depersonificazione!</p>
-    <p class="disclaimer">l’impellente necessità di esprimersi della nostra generazione, ha portato alla creazione di questa fanzine</p>
-</div>
-</div>
+    <p class="disclaimer">l'impellente necessità di esprimersi della nostra generazione, ha portato alla creazione di questa fanzine</p>
+  </footer>
 </body>
 </html>
