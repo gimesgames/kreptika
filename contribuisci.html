@@ -313,20 +313,87 @@
                 grid-template-columns: 1fr;
             }
         }
+        
         .quote {
-      font-style: italic;
-      color: #0f0;
-      border-left: 3px solid #0f0;
-      padding-left: 10px;
-      margin: 20px 0;
-    }
+            font-style: italic;
+            color: #0f0;
+            border-left: 3px solid #0f0;
+            padding-left: 10px;
+            margin: 20px 0;
+        }
+        
+        /* Nuovi stili per migliorare la gerarchia dei testi */
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .contact-info {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px dashed #0f0;
+            background-color: rgba(0, 255, 0, 0.05);
+            text-align: center;
+        }
+        
+        .questions-container {
+            margin: 25px 0;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #0f0;
+            padding-bottom: 5px;
+        }
+        
+        .article-wrapper {
+            background-color: #111;
+            border: 1px solid #333;
+            padding: 20px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .article-meta {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .article-content {
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="sidebar"></div>
         
-        <div class="header">
+        <header class="header">
             <div class="logo-container">
                 <div class="logo">
                     <img src="/img/title.png" alt="KREPTIKA logo" style="filter: invert(1);">
@@ -334,53 +401,53 @@
             </div>
             <div class="tagline">Fanzine autoprodotta</div>
             
-            <div class="nav-menu">
+            <nav class="nav-menu">
                 <a href="/index.html" class="nav-link">Home</a>
                 <a href="#" class="nav-link">Fanzine Pdf</a>
                 <a href="#" class="nav-link">Foto</a>
                 <a href="#" class="nav-link">Altri progetti</a>
-            </div>
-        </div>
+            </nav>
+        </header>
         
-        <div class="attention-banner">
+        <section class="attention-banner">
             CONTRIBUISCI AL PROGETTO
-        </div>
-        
-
+        </section>
         
         <div class="topographic"></div>
         
-        <div class="main-content">
-            <div class="article-wrapper">
-                <div class="article-title">Come posso contribuire al progetto?</div>
-                <div class="article-meta">Per quasiasi proposta : kreptika@keemail.me </div>
+        <main class="main-content">
+            <article class="article-wrapper">
+                <h1 class="article-title">Come posso contribuire al progetto?</h1>
+                <div class="article-meta">Per qualsiasi proposta: <strong>kreptika@keemail.me</strong></div>
                 <div class="article-content">
-                  <p>
+                    <div class="questions-container">
+                        <h2 class="section-title">Partecipa</h2>
+                        <p class="quote">
+                            Hai una storia da raccontare?
+                        </p>
+                        <p class="quote">
+                            Hai un'idea per una nuova rubrica?
+                        </p>
+                        <p class="quote">
+                            Vuoi scrivere un'articolo su questioni di attualità?
+                        </p>
+                    </div>
                     
-                   </p>
-                  <p class="quote">
-                    Hai una storia da raccontare?
-                  </p>
-                  <p class="quote">
-                    Hai un'idea per una nuova rubrica?
-                  </p>
-                  <p class="quote">
-                    Vuoi scrivere un'articolo su questioni di attualità?
-                  </p>
- 
+                    <div class="contact-info">
+                        Scrivi a <strong>kreptika@keemail.me</strong> per entrare in contatto con la redazione
+                    </div>
                 </div>
-              </div>
-            
-        </div>
+            </article>
+        </main>
 
-        <div class="alert-box">
-           
-        </div>
+        <aside class="alert-box">
+            <!-- Contenitore per eventuali avvisi -->
+        </aside>
         
-        <div class="footer">
+        <footer class="footer">
             <p>ferma SUBITO la tua depersonificazione!</p>
-            <p class="disclaimer">l’impellente necessità di esprimersi della nostra generazione, ha portato alla creazione di questa fanzine</p>
-        </div>
+            <p class="disclaimer">l'impellente necessità di esprimersi della nostra generazione, ha portato alla creazione di questa fanzine</p>
+        </footer>
     </div>
 </body>
 </html>
