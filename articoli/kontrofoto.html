@@ -85,7 +85,7 @@
         .video-container {
             max-width: 800px;
             margin: 40px auto;
-            padding: 10px;
+            padding: 20px;
             background-color: #111;
             border: 1px solid #333;
             position: relative;
@@ -103,18 +103,18 @@
             text-align: center;
             font-size: 24px;
             font-weight: bold;
-            margin: 15px 0;
+            margin: 0 0 20px 0;
             text-transform: uppercase;
             border-bottom: 1px dashed #fff;
-            padding-bottom: 5px;
+            padding-bottom: 10px;
+            letter-spacing: 1.5px;
         }
 
         .video-description {
             font-size: 14px;
             line-height: 1.6;
-            margin-top: 10px;
+            margin-top: 20px;
             color: #ccc;
-            text-align: justify;
         }
 
         .footer {
@@ -125,48 +125,132 @@
             border-top: 1px solid #333;
             font-size: 12px;
         }
+        
+        /* Nuovi stili per migliorare la gerarchia dei testi */
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 22px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #0f0;
+        }
+        
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            margin: 20px 0;
+            border: 2px solid #0f0;
+        }
+        
+        .description-content {
+            margin-top: 25px;
+        }
+        
+        .video-meta {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px dotted #333;
+        }
+        
+        .credits {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: rgba(15, 255, 15, 0.05);
+            border-left: 3px solid #0f0;
+        }
+        
+        .credits-title {
+            font-weight: bold;
+            color: #0f0;
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        
+        .credits-item {
+            margin-bottom: 8px;
+        }
+        
+        .disclaimer {
+            font-size: 12px;
+            text-align: center;
+            font-style: italic;
+            margin-top: 10px;
+            color: #aaa;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar"></div>
 
-    <div class="header">
+    <header class="header">
         <div class="logo">
             <img src="https://i.imgur.com/f0lEuZQ.png" alt="KREPTIKA logo">
         </div>
         <div class="tagline">Fanzine autoprodotta</div>
 
-        <div class="nav-menu">
+        <nav class="nav-menu">
             <a href="http://kreptika.it" class="nav-link">Home</a>
             <a href="#" class="nav-link">Fanzine Pdf</a>
             <a href="#" class="nav-link">Foto</a>
             <a href="/contribuisci.html" class="nav-link">Contribuisci</a>
             <a href="#" class="nav-link">Altri progetti</a>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <div class="video-container">
-        <div class="video-title">KONTROFOTO</div>
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/tJF-yKYjFgs" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-        clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen></iframe>
-    <div class="video-description">
-        <div class="video-description">
-        <div class="video-description">
-          <p>
-            Breve report video.
-          </p>
-      Durante la pacifica manifestazione del 25 aprile 2025, mi sono messo controfilmare come atto di protesta non violenta alla strumentalizzazione dell'immagine.
-      <p>Musiche di "Mauro Lupone" saccheggiate dal documentario "SOLO LIMONI" diretto da Giacomo Verde e prodotto da ShaKe Edizioni Underground,<p>
-        <p>voce di sottofondo estratta dal documentario "La société du spectacle" del regista e filosofo Guy Debord. </p>
-          
+    <main class="video-container">
+        <h1 class="video-title">KONTROFOTO</h1>
         
-      </div>
-    </div>
+        <div class="iframe-container">
+            <iframe width="100%" height="450" src="https://www.youtube.com/embed/tJF-yKYjFgs" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+        
+        <article class="video-description">
+            <div class="description-content">
+                <h2>Breve report video</h2>
+                <p>Durante la pacifica manifestazione del 25 aprile 2025, mi sono messo controfilmare come atto di protesta non violenta alla strumentalizzazione dell'immagine.</p>
+            </div>
+            
+            <div class="video-meta">
+                <div class="credits">
+                    <div class="credits-title">Crediti</div>
+                    <div class="credits-item">
+                        <strong>Musica:</strong> "Mauro Lupone" saccheggiate dal documentario "SOLO LIMONI" diretto da Giacomo Verde e prodotto da ShaKe Edizioni Underground
+                    </div>
+                    <div class="credits-item">
+                        <strong>Audio:</strong> Voce di sottofondo estratta dal documentario "La société du spectacle" del regista e filosofo Guy Debord
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
 
-    <div class="footer">
+    <footer class="footer">
         <p>ferma SUBITO la tua depersonificazione!</p>
-            <p class="disclaimer">l’impellente necessità di esprimersi della nostra generazione, ha portato alla creazione di questa fanzine</p>    </div>
+        <p class="disclaimer">l'impellente necessità di esprimersi della nostra generazione, ha portato alla creazione di questa fanzine</p>
+    </footer>
 </body>
 </html>
